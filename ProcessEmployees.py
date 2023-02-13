@@ -22,25 +22,26 @@ csr_dict = {}
 
 # use a loop to iterate through the csv file
 for row in sales:
-    first_name = row[1]
-    last_name = row[2]
-    old_salary = row[5]
-    salary = float(row[5]) * 1.1
+    if row[3] == "Marketing" and row[4] == "CSR":
+        first_name = row[1]
+        last_name = row[2]
+        old_salary = float(row[5])
+        salary = float(row[5]) * 1.1
 
-    full_name = first_name + " " + last_name
+        full_name = first_name + " " + last_name
 
-    csr_dict[full_name] = salary
+        csr_dict[full_name] = salary
 
-    # check if the employee fits the search criteria
+        # check if the employee fits the search criteria
 
-    print(f"Manager Name: {full_name} Current Salary: ${old_salary}")
+        print(f"Manager Name: {full_name} Current Salary: ${old_salary:.2f}")
 
 print()
 print("=========================================")
 print()
 
 for full_name in csr_dict:
-    print(f"Manager Name: {full_name} New Salary: ${salary:.0f}")
+    print(f"Manager Name: {full_name} New Salary: ${salary:.2f}")
 
 
 # iternate through the dictionary and print out the key and value as per printout
