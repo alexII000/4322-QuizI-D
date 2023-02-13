@@ -41,8 +41,8 @@ print()
 
 for row in sales:
     infile = open("employee_data.csv", "r")
-sales = csv.reader(infile, delimiter=",")
-next(sales)
+    sales = csv.reader(infile, delimiter=",")
+    next(sales)
     print(f"Manager Name: {full_name} New Salary: ${salary}")
 # iternate through the dictionary and print out the key and value as per printout
 
