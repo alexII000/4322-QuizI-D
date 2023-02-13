@@ -34,14 +34,14 @@ for row in sales:
 
         # check if the employee fits the search criteria
 
-        print(f"Manager Name: {full_name} Current Salary: ${old_salary:.2f}")
+        print(f"Manager Name: {full_name} Current Salary: ${old_salary:,.2f}")
 
 print()
 print("=========================================")
 print()
 
 for full_name in csr_dict:
-    print(f"Manager Name: {full_name} New Salary: ${salary:.2f}")
+    print(f"Manager Name: {full_name} New Salary: ${salary:,.2f}")
 
 
 # iternate through the dictionary and print out the key and value as per printout
